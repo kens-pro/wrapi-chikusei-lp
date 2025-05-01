@@ -4,6 +4,43 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  /* スライダーの全体を中央＆横幅制限 */
+.swiper-container {
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+/* スライド1枚あたりの画像スタイル調整 */
+.swiper-slide {
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.swiper-slide img {
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+}
+
+/* キャプションの調整 */
+.caption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* セクションの余白調整 */
+#wrapi-gallery-slider {
+  padding: 40px 10px 40px; /* ←下余白を縮める */
+}
+
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ちっくんピアノプロジェクト｜筑西市×Wrapi®</title>
@@ -152,12 +189,12 @@
         <div style="width: 100%; aspect-ratio: 4/3; overflow: hidden; border-radius: 6px;">
           <img src="./public/IMG_2105.jpg" alt="Before - ラッピング前のピアノ" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
-        <p style="margin-top: 10px; font-weight: bold; color: #555;">Before：無機質なピアノ</p>
+        <p style="margin-top: 10px; font-weight: bold; color: #555;">Before：ピアノは黒という常識が</p>
       </div>
   
       <div style="flex: 1 1 300px; max-width: 360px; text-align: center; background: white; padding: 10px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
         <div style="width: 100%; aspect-ratio: 4/3; overflow: hidden; border-radius: 6px;">
-          <img src="./public/DSC_0364.jpg" alt="After - Wrapiで生まれ変わったピアノ" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="./public/007.jpg" alt="After - Wrapiで生まれ変わったピアノ" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
         <p style="margin-top: 10px; font-weight: bold; color: #555;">After：Wrapiでアートピアノに変身！</p>
       </div>
@@ -165,6 +202,95 @@
     </div>
   </section>
   
+<!-- Wrapi導入事例ギャラリー -->
+<section id="wrapi-gallery-slider" style="background: #fff; padding: 40px 0;">
+  <h2 style="text-align: center; font-size: 1.8rem; color: #2c3e50; margin-bottom: 30px;">
+    Wrapi® 導入事例ギャラリー
+  </h2>
+
+  <div class="swiper-container" style="max-width: 960px; margin: auto; padding: 0 20px;">
+    <div class="swiper-wrapper">
+      <!-- スライド項目 -->
+      <div class="swiper-slide"><img src="./public/001.jpg" alt="Wrapi導入事例 1"><p class="caption">事例 1</p></div>
+      <div class="swiper-slide"><img src="./public/002.jpg" alt="Wrapi導入事例 2"><p class="caption">事例 2</p></div>
+      <div class="swiper-slide"><img src="./public/003.jpg" alt="Wrapi導入事例 3"><p class="caption">事例 3</p></div>
+      <div class="swiper-slide"><img src="./public/004.jpg" alt="Wrapi導入事例 4"><p class="caption">事例 4</p></div>
+      <div class="swiper-slide"><img src="./public/005.png" alt="Wrapi導入事例 5"><p class="caption">事例 5</p></div>
+      <div class="swiper-slide"><img src="./public/006.jpg" alt="Wrapi導入事例 6"><p class="caption">事例 6</p></div>
+      <div class="swiper-slide"><img src="./public/007.jpg" alt="Wrapi導入事例 7"><p class="caption">事例 7</p></div>
+      <div class="swiper-slide"><img src="./public/008.jpg" alt="Wrapi導入事例 8"><p class="caption">事例 8</p></div>
+      <div class="swiper-slide"><img src="./public/009.jpg" alt="Wrapi導入事例 9"><p class="caption">事例 9</p></div>
+    </div>
+    <!-- ナビゲーション -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+<!-- Swiper スタイル調整 -->
+<style>
+  .swiper-container {
+    max-width: 960px;
+    overflow: hidden;
+    margin-bottom: 0;
+    padding-bottom: 0 !important;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    margin-bottom: 0 !important;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    width: auto;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .caption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #444;
+  }
+
+  #wrapi-gallery-slider {
+    margin-bottom: 0;
+    padding-bottom: 0 !important;
+  }
+</style>
+
+<script>
+  new Swiper('.swiper-container', {
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    }
+  });
+</script>
   
   <section id="art">
     <h2>このアートは、“誰かの想い”でできています</h2>
@@ -255,7 +381,34 @@
       </a>
     </div>
   </footer>
-  
+ <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Swiper 初期化 -->
+<script>
+  new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    }
+  });
+</script>
+ 
   
 </body>
 </html>
