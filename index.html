@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ちっくんピアノプロジェクト｜Wrapi × 筑西市</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      background: url('./public/hero.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    header h1,
+    header p {
+      position: relative;
+      z-index: 2;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5em;
+    }
+    header p {
+      font-size: 1.4rem;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background: #eee;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>駅に、アートがやってくる。</h1>
+    <p>ちっくんステーション × Wrapi × 障害者アート</p>
+  </header>
+
+  <section id="overview">
+    <h2>なぜ、駅にラッピングピアノがやってくるのか？</h2>
+    <p>筑西市のちっくんステーションに、障害者アートで彩られたラッピングピアノが設置されます。<br>
+    駅を訪れるすべての人にとって、音とアートが身近になる場所を目指しています。</p>
+  </section>
+
+  <section id="wrapi">
+    <h2>“Wrapi”ってなに？ ピアノがアートに変わる理由</h2>
+    <p>Wrapiは、株式会社トリイが手がけるピアノラッピングサービスです。<br>
+    デザイン性・耐久性・空間演出に優れ、古いピアノも新たな価値を持って再生されます。</p>
+  </section>
+
+  <section id="art">
+    <h2>このアートは、“誰かの想い”でできています</h2>
+    <p>今回使用されるアートは、地域の障害者アーティストによるもの。<br>
+    一つひとつの作品には、その人の表現とメッセージが込められています。</p>
+    <img src="./public/art_sample.jpg" alt="障害者アートの一部">
+  </section>
+
+  <section id="story">
+    <h2>出会いから、設置まで。</h2>
+    <p>地域商社Chikusei-mineとWrapiの出会いから始まり、官民連携で実現した本プロジェクト。<br>
+    多くの人の協力と思いが形になろうとしています。</p>
+  </section>
+
+  <section id="experience">
+    <h2>音を、触れてください。</h2>
+    <p>設置されたピアノは、誰でも自由に演奏することができます。<br>
+    新たな交流や表現の場として、多くの人に親しまれることを願っています。</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Wrapi & Chikusei-mine Project</p>
+  </footer>
+</body>
+</html>
