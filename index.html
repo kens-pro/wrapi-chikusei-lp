@@ -4,39 +4,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  /* スライダーの全体を中央＆横幅制限 */
-.swiper-container {
-  max-width: 100%;
-  overflow: hidden;
-  padding-bottom: 20px;
-}
 
-/* スライド1枚あたりの画像スタイル調整 */
-.swiper-slide {
-  text-align: center;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.swiper-slide img {
-  width: 100%;
-  max-height: 240px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
-}
-
-/* キャプションの調整 */
-.caption {
-  margin-top: 8px;
-  font-size: 0.9rem;
-  color: #444;
-}
-
-/* セクションの余白調整 */
-#wrapi-gallery-slider {
-  padding: 40px 10px 40px; /* ←下余白を縮める */
-}
 
   <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -111,6 +79,22 @@
       height: auto;
       border-radius: 4px;
     }
+/* ────────── ここから追記 ────────── */
+    /* Wrapi導入事例ギャラリーだけ余白を調整 */
+    #wrapi-gallery-slider {
+      background: #fff;
+      padding: 40px 10px 0;   /* 上40px・左右10px・下0 */
+      margin-bottom: 0;       /* 下マージンもリセット */
+    }
+    /* Swiper コンテナの垂直パディングもリセット */
+    .swiper-container {
+      max-width: 960px;
+      margin: 0 auto;
+      overflow: hidden;
+      padding: 0;
+    }
+    /* ────────── 追記ここまで ────────── */
+      
   </style>
 </head>
 <body>
@@ -203,7 +187,7 @@
   </section>
   
 <!-- Wrapi導入事例ギャラリー -->
-<section id="wrapi-gallery-slider" style="background: #fff; padding: 40px 0;">
+<section id="wrapi-gallery-slider">
   <h2 style="text-align: center; font-size: 1.8rem; color: #2c3e50; margin-bottom: 30px;">
     Wrapi® 導入事例ギャラリー
   </h2>
@@ -236,6 +220,13 @@
     padding-bottom: 0 !important;
   }
 
+    /* ここから追加 */
+    /* Artセクションの上部パディングをゼロに */
+    #art {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
+    /* ここまで追加 */
   .swiper-wrapper {
     display: flex;
     margin-bottom: 0 !important;
