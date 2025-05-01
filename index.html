@@ -94,6 +94,15 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
   
+      /* ② ここに追記 ↓↓↓ */
+  /* 特設ページバナーは余計なセクション共通スタイルを打ち消して全幅表示に */
+  section.wrapi-5th-banner {
+    padding: 0 !important;
+    max-width: none !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+  }
+  
     .wrapi-5th-banner h2 {
       font-size: 1.5rem;
       color: #212121;
@@ -171,7 +180,7 @@
       background: #f9f9f9;
       max-width: 900px;
       margin: 20px auto;
-    }
+    }    
   </style>
 </head>
 <body>
